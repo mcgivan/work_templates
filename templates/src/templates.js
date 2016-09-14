@@ -19,6 +19,7 @@ template = function(str, dependence, left_separator, right_separator){
         
     return str.replace(new RegExp(left_separator+"(.*?)"+right_separator,"ig"),function(){
         // Если зависимость не найдена то ничего не меняем
-        return dependence[arguments[1]] ? dependence[arguments[1]] : arguments[0]
+        //return dependence[arguments[1]] ? dependence[arguments[1]] : arguments[0]
+        return dependence[arguments[1]] ? dependence[arguments[1]] : '';
     });
 }
